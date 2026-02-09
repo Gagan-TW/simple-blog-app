@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap");
+
+:root {
+    --bg-1: #f4efe9;
+    --bg-2: #e9f1f0;
+    --ink: #1f2a2e;
+    --muted: #5b6a70;
+    --accent: #d06a3b;
+    --accent-dark: #a6522e;
+    --card: #ffffff;
+    --border: #d7d1c9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #fff3d6 0%, transparent 60%),
+        radial-gradient(900px 700px at 110% 10%, #e0f2f0 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2));
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 20px 64px;
+}
+
+h1 {
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0 0 24px;
+}
+
+.new-post {
+    display: grid;
+    gap: 12px;
+    background: var(--card);
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(31, 42, 46, 0.08);
+}
+
+input,
+textarea {
+    width: 100%;
+    font: inherit;
+    color: var(--ink);
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fffdf9;
+    transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--muted);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(208, 106, 59, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    justify-self: start;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 18px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 120ms ease, background 120ms ease;
+}
+
+button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#posts {
+    margin-top: 28px;
+    display: grid;
+    gap: 14px;
+}
+
+#posts article {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+}
+
+#posts h2 {
+    font-family: "Fraunces", "Times New Roman", serif;
+    margin: 0 0 8px;
+}
+
+#posts p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 36px 16px 48px;
+    }
+
+    button {
+        width: 100%;
+        text-align: center;
+    }
+}
+body{
+   font:  sans-serif;
+   background-color: rgb(232, 229, 229);
+
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+}
