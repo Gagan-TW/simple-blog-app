@@ -9,17 +9,17 @@
 <body>
     <div class="container">
         <h1>My Blog</h1>
-        <div class="new-post">
+        <form id="addPostForm" class="new-post">
             <input id="titleInput" type="text" placeholder="Post title">
             <textarea id="contentInput" rows="5" placeholder="Write your post..."></textarea>
-            <button id="addPostBtn" type="button">Add Post</button>
-        </div>
-        <div class="new-post">
+            <button id="addPostBtn" type="submit">Add Post</button>
+        </form>
+        <form id="updatePostForm" class="new-post">
             <input id="updateIdInput" type="number" min="1" placeholder="Post ID to update">
             <input id="updateTitleInput" type="text" placeholder="New title">
             <textarea id="updateContentInput" rows="5" placeholder="New content..."></textarea>
-            <button id="updatePostBtn" type="button">Update Post</button>
-        </div>
+            <button id="updatePostBtn" type="submit">Update Post</button>
+        </form>
         <div id="posts"></div>
     </div>
     

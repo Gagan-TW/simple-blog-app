@@ -4,10 +4,12 @@ const posts = storedPosts ? JSON.parse(storedPosts) : [];
 const titleInput = document.getElementById("titleInput");
 const contentInput = document.getElementById("contentInput");
 const addPostBtn = document.getElementById("addPostBtn");
+const addPostForm = document.getElementById("addPostForm");
 const updateIdInput = document.getElementById("updateIdInput");
 const updateTitleInput = document.getElementById("updateTitleInput");
 const updateContentInput = document.getElementById("updateContentInput");
 const updatePostBtn = document.getElementById("updatePostBtn");
+const updatePostForm = document.getElementById("updatePostForm");
 const postsContainer = document.getElementById("posts");
 
 function renderPosts() {
@@ -130,8 +132,15 @@ function updatePost() {
 	updateContentInput.value = "";
 }
 
-addPostBtn.addEventListener("click", createPost);
-updatePostBtn.addEventListener("click", updatePost);
+addPostForm.addEventListener("submit", (event) => {
+	event.preventDefault();
+	createPost();
+});
+
+updatePostForm.addEventListener("submit", (event) => {
+	event.preventDefault();
+	updatePost();
+});
 
 renderPosts();
 
